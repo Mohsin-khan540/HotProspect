@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0496602C2EC6449B0014BEF5 /* SamplePackage in Frameworks */ = {isa = PBXBuildFile; productRef = 0496602B2EC6449B0014BEF5 /* SamplePackage */; };
+		04FFD90D2EC84BBD007D0A00 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 04FFD90C2EC84BBD007D0A00 /* CodeScanner */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		04A16B842EC1039800987FF1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FFD90D2EC84BBD007D0A00 /* CodeScanner in Frameworks */,
+				0496602C2EC6449B0014BEF5 /* SamplePackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +119,8 @@
 			);
 			name = HotProspects;
 			packageProductDependencies = (
+				0496602B2EC6449B0014BEF5 /* SamplePackage */,
+				04FFD90C2EC84BBD007D0A00 /* CodeScanner */,
 			);
 			productName = HotProspects;
 			productReference = 04A16B762EC1039600987FF1 /* HotProspects.app */;
@@ -171,7 +180,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2600;
-				LastUpgradeCheck = 2600;
+				LastUpgradeCheck = 2610;
 				TargetAttributes = {
 					04A16B752EC1039600987FF1 = {
 						CreatedOnToolsVersion = 26.0.1;
@@ -195,6 +204,10 @@
 			);
 			mainGroup = 04A16B6D2EC1039600987FF1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0496602A2EC6434E0014BEF5 /* XCRemoteSwiftPackageReference "SamplePackage" */,
+				04FFD90B2EC84BBD007D0A00 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 04A16B772EC1039600987FF1 /* Products */;
 			projectDirPath = "";
@@ -328,6 +341,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -385,6 +399,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -400,6 +415,8 @@
 				DEVELOPMENT_TEAM = 5ZH7UK2GU4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "we need to scan QR code";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "we are wnt to save your qrcode";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,6 +449,8 @@
 				DEVELOPMENT_TEAM = 5ZH7UK2GU4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "we need to scan QR code";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "we are wnt to save your qrcode";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -578,6 +597,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0496602A2EC6434E0014BEF5 /* XCRemoteSwiftPackageReference "SamplePackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/SamplePackage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		04FFD90B2EC84BBD007D0A00 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0496602B2EC6449B0014BEF5 /* SamplePackage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0496602A2EC6434E0014BEF5 /* XCRemoteSwiftPackageReference "SamplePackage" */;
+			productName = SamplePackage;
+		};
+		04FFD90C2EC84BBD007D0A00 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04FFD90B2EC84BBD007D0A00 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04A16B6E2EC1039600987FF1 /* Project object */;
 }
